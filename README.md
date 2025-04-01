@@ -189,7 +189,7 @@ Create automated deployment pipeline with GitHub Actions or Jenkins:
 
 ---
 
-# Unity Enterprise API Frontend
+# Unity Enterprise Application Frontend
 
 ## Overview
 
