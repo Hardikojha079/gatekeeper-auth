@@ -49,8 +49,8 @@ The backend follows a modular, maintainable architecture:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/secure-enterprise-api.git
-   cd secure-enterprise-api
+   git clone https://github.com/Hardikojha079/gatekeeper-auth.git
+   cd gatekeeper-auth
    ```
 
 2. Create and activate a virtual environment:
@@ -132,7 +132,7 @@ Deploy behind Nginx for load balancing:
 
 ```
 # nginx.conf example
-upstream enterprise_api {
+upstream gatekeeper_auth {
     server app1:5000;
     server app2:5000;
     server app3:5000;
@@ -141,7 +141,7 @@ upstream enterprise_api {
 server {
     listen 80;
     location / {
-        proxy_pass http://enterprise_api;
+        proxy_pass http://gatekeeper_auth;
     }
 }
 ```
