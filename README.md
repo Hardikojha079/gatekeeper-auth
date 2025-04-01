@@ -1,5 +1,4 @@
-
-#  Unity🌉Flask Auth Bridge
+# Unity🌉Flask Auth Bridge
 
 A production-ready Flask-based backend for an enterprise level application with enterprise-grade security features, authentication, rate limiting, and comprehensive user management.
 
@@ -8,7 +7,7 @@ A production-ready Flask-based backend for an enterprise level application with 
 The backend follows a modular, maintainable architecture:
 
 - **Application Factory Pattern**: Enables flexible configuration across environments
-- **PostgreSQL Database**: Robust relational database for banking data persistence
+- **PostgreSQL Database**: Robust relational database for enterprise data persistence
 - **JWT Authentication**: Secure, stateless authentication system with role-based claims
 - **Redis-backed Rate Limiting**: Prevents credential stuffing and DoS attacks
 - **Comprehensive Error Handling**: Structured error responses with detailed internal logging
@@ -50,8 +49,8 @@ The backend follows a modular, maintainable architecture:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/secure-banking-api.git
-   cd secure-banking-api
+   git clone https://github.com/yourusername/secure-enterprise-api.git
+   cd secure-enterprise-api
    ```
 
 2. Create and activate a virtual environment:
@@ -71,7 +70,7 @@ The backend follows a modular, maintainable architecture:
    DB_PASSWORD=your_password
    DB_HOST=127.0.0.1
    DB_PORT=5432
-   DB_NAME=DummyBankData
+   DB_NAME=EnterpriseData
    JWT_SECRET_KEY=your_secret_key
    REDIS_URL=redis://localhost:6379/0
    ```
@@ -96,7 +95,7 @@ Create Docker infrastructure:
 
 ```bash
 # Create Dockerfile
-docker build -t banking-api:latest .
+docker build -t enterprise-api:latest .
 
 # Run with Docker Compose
 docker-compose up -d
@@ -133,7 +132,7 @@ Deploy behind Nginx for load balancing:
 
 ```
 # nginx.conf example
-upstream banking_api {
+upstream enterprise_api {
     server app1:5000;
     server app2:5000;
     server app3:5000;
@@ -142,7 +141,7 @@ upstream banking_api {
 server {
     listen 80;
     location / {
-        proxy_pass http://banking_api;
+        proxy_pass http://enterprise_api;
     }
 }
 ```
@@ -190,7 +189,7 @@ Create automated deployment pipeline with GitHub Actions or Jenkins:
 
 ---
 
-# Unity Banking API Frontend
+# Unity Enterprise API Frontend
 
 ## Overview
 
