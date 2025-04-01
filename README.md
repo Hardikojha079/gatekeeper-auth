@@ -191,3 +191,68 @@ Create automated deployment pipeline with GitHub Actions or Jenkins:
 
 ---
 
+# Unity Banking API Frontend
+
+## Overview
+
+This Unity frontend provides a modular interface for interacting with our robust banking API backend. The system implements user authentication with JWT tokens and lays the groundwork for a complete banking application. Currently, only the login authentication UI has been fully implemented, while the registration and admin interfaces are ready for development.
+
+## Architecture
+
+The frontend consists of several modular components:
+
+1. **APIManager**: Handles all API communication and token management
+2. **RequestHelper**: Utility for HTTP requests (GET, POST, PUT, DELETE)
+3. **Model Classes**: Serializable data structures for API communication
+4. **Endpoints**: Configuration for API URLs
+5. **AuthUI**: User interface for authentication
+6. **Logger**: Utility for consistent logging
+
+## Implemented Features
+
+- **Login Authentication**: Complete UI and functionality for user login
+- **JWT Token Management**: Secure storage and handling of authentication tokens
+- **API Communication Framework**: Infrastructure for all backend endpoints
+- **Profile Data Access**: Functions to retrieve user profile information
+- **User Management API**: Methods for updating and deleting users
+
+## For Developers
+
+### Important Note
+This implementation only includes the login UI. To fully utilize the backend capabilities, you'll need to implement:
+
+1. **Registration UI**: Interface for new user registration (backend endpoint ready)
+2. **Admin Dashboard**: Interface for user management functions that are already accessible via the API
+3. **User Profile UI**: Interface to display and edit profile data (API methods already implemented)
+
+## System Robustness
+
+The combined frontend-backend architecture offers exceptional stability and security:
+
+- **Layered Authentication**: Frontend token management paired with backend JWT verification
+- **Clean Separation**: UI components isolated from business logic and API communication
+- **Flexible Architecture**: Easy to extend with new features without compromising existing functionality
+- **Comprehensive Backend**: Ready-made endpoints for user operations with corresponding frontend API methods
+- **Error Resilience**: Structured error handling between frontend and backend
+
+## Future Enhancements
+
+1. **Complete UI Implementation**: Finish registration and admin interfaces
+2. **Token Refresh Mechanism**: Add automatic handling of token expiration
+3. **Form Validation**: Add client-side validation before API requests
+4. **Loading States**: Implement visual indicators during API calls
+5. **Notification System**: Display backend alerts and messages
+6. **Remember Me Functionality**: Add option to persist login sessions
+
+## Usage Example
+
+```csharp
+// Login and retrieve profile data
+apiManager.Login(new LoginRequest(accountNumber, password), response => {
+    if (response.Contains("successful")) {
+        apiManager.FetchProfile(profileData => {
+            // Process profile information
+        });
+    }
+});
+```
