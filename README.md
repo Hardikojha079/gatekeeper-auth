@@ -1,6 +1,5 @@
-# Unity_Authentication_Flask_Framework
 
-# 🏦 Secure Banking API
+#  Unity🌉Flask Auth Bridge
 
 A production-ready Flask-based backend for a banking application with enterprise-grade security features, authentication, rate limiting, and comprehensive user management.
 
