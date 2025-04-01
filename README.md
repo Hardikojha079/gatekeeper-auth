@@ -1,7 +1,7 @@
 
 #  Unity🌉Flask Auth Bridge
 
-A production-ready Flask-based backend for a banking application with enterprise-grade security features, authentication, rate limiting, and comprehensive user management.
+A production-ready Flask-based backend for an enterprise level application with enterprise-grade security features, authentication, rate limiting, and comprehensive user management.
 
 ## 🔍 Backend Architecture
 
@@ -194,7 +194,7 @@ Create automated deployment pipeline with GitHub Actions or Jenkins:
 
 ## Overview
 
-This Unity frontend provides a modular interface for interacting with our robust banking API backend. The system implements user authentication with JWT tokens and lays the groundwork for a complete banking application. Currently, only the login authentication UI has been fully implemented, while the registration and admin interfaces are ready for development.
+This Unity frontend provides a modular interface for interacting with our robust API backend. The system implements user authentication with JWT tokens and lays the groundwork for a complete application. Currently, only the login authentication UI has been fully implemented, while the registration and admin interfaces are ready for development.
 
 ## Architecture
 
