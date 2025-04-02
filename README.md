@@ -70,7 +70,7 @@ The backend follows a modular, maintainable architecture:
    DB_PASSWORD=your_password
    DB_HOST=127.0.0.1
    DB_PORT=5432
-   DB_NAME=EnterpriseData
+   DB_NAME=your_db_name
    JWT_SECRET_KEY=your_secret_key
    REDIS_URL=redis://localhost:6379/0
    ```
